@@ -3,6 +3,6 @@
     <title>Tiitel</title>
 </head>
 <body>
-<?php echo '<p>Tere Maailm</p>'; ?>
+<?php echo '<p>Tere Maailm!</p>'; ?>
 </body>
 </html>
