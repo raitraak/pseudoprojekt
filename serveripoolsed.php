@@ -2,4 +2,4 @@
 
 echo 'Rait ';
 echo 'Rääk';
-?>
+?>0
