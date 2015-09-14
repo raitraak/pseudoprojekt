@@ -2,8 +2,9 @@
 
 $eesnimi = 'Rait';
 $perenimi = 'Raak';
+$vanus = (25);
 
-echo $eesnimi.' '.$perenimi
+echo $eesnimi.' '.$perenimi.' '."($vanus)"
 
 
 ?>
