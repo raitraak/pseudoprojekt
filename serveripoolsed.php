@@ -1,7 +1,8 @@
 <?php
 
-echo 'Rait'.' ';
-echo 'Raak';
+$eesnimi = 'Rait';
+$perenimi = 'Raak';
 
+echo $eesnimi.' '.$perenimi
 
 ?>
