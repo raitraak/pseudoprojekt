@@ -5,5 +5,4 @@ $perenimi = 'Raak';
 
 echo $eesnimi.' '.$perenimi
 
-
 ?>
