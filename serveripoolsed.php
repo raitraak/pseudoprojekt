@@ -1,10 +1,17 @@
 <?php
 
-$eesnimi = 'Rait ';
-$perekonnanimi = 'Rääk ';
-$vanus = '(25)';
+$eesnimi = 'Rait';
+$perekonnanimi = 'Raak';
+$vanus = 25;
+$nimi_algab_vokaaliga = False;
 
-echo $eesnimi,$perekonnanimi,$vanus
+$isik = $eesnimi.' '.$perekonnanimi.' '."($vanus)";
+
+echo $isik;
+
+if ($nimi_algab_vokaaliga == False) {
+    echo "<br>Nimi ei alga vokaaliga";
+}
 
 
 ?>
