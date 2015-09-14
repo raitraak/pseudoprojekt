@@ -13,5 +13,4 @@ if ($nimi_algab_vokaaliga == False) {
     echo "<br>Nimi ei alga vokaaliga";
 }
 
-
 ?>
