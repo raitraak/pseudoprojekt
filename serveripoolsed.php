@@ -44,4 +44,5 @@ elseif ($eesnimi[0] == 'ü')
 else {
     echo 'Nimi ei alga vokaaliga';
 }
+
 ?>
