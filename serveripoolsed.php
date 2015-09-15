@@ -1,18 +1,47 @@
 <?php
 
-class isik_klass {
-    var $eesnimi = 'Rait';
-    var $perenimi = 'Raak';
-    var $vanus = '25';
-    var $sugu = 'mees';
+$eesnimi = 'Rait';
+$perenimi = 'Raak';
+$vanus = 25;
+$isik = $eesnimi.' '.$perenimi.' '."($vanus)";
+
+echo $isik.'<br>';
+
+if ($eesnimi[0] == 'A')
+{
+
+    echo 'Nimi algab vokaaliga';
+}
+elseif ($eesnimi[0] == 'e')
+{
+
+    echo 'Nimi algab vokaaliga';
 }
 
-$isik = new isik_klass;
+elseif ($eesnimi[0] == 'i')
+{
 
-echo $isik->eesnimi.' ';
-echo $isik->perenimi.' ';
-echo $isik->vanus.' ';
-echo $isik->sugu;
+    echo 'Nimi algab vokaaliga';
+}
+elseif ($eesnimi[0] == 'o')
+{
 
+    echo 'Nimi algab vokaaliga';
+}
 
+elseif ($eesnimi[0] == 'u')
+{
+
+    echo 'Nimi algab vokaaliga';
+}
+
+elseif ($eesnimi[0] == 'ü')
+{
+
+    echo 'Nimi algab vokaaliga';
+}
+
+else {
+    echo 'Nimi ei alga vokaaliga';
+}
 ?>
