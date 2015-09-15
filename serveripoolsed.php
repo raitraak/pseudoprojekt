@@ -1,18 +1,13 @@
 <?php
 
-class isik_klass {
-    var $eesnimi = 'Rait';
-    var $perenimi = 'Raak';
-    var $vanus = '25';
-    var $sugu = 'mees';
-}
+$eesnimi = 'Rait';
+$perenimi = 'Raak';
+$vanus = '25';
+$sugu = 'mees';
 
-$isik = new isik_klass;
+$isik = $eesnimi.' '.$perenimi.' '."($vanus)";
 
-echo $isik->eesnimi.' ';
-echo $isik->perenimi.' ';
-echo $isik->vanus.' ';
-echo $isik->sugu;
+echo $isik
 
 
 ?>
