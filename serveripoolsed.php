@@ -8,10 +8,6 @@ $nimi_algab_vokaaliga = False;
 
 $isik = $eesnimi.' '.$perenimi.' '."($vanus)";
 
-echo $isik.'<br>';
-
-if ($nimi_algab_vokaaliga == False)
-
-    echo 'Nimi ei alga vokaaliga';
+echo $isik;
 
 ?>
