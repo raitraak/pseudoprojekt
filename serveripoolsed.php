@@ -1,13 +1,18 @@
 <?php
 
-$eesnimi = 'Rait';
-$perenimi = 'Raak';
-$vanus = '25';
-$sugu = 'mees';
-$nimi_algab_vokaaliga = False;
+class isik_klass {
+    var $eesnimi = 'Rait';
+    var $perenimi = 'Raak';
+    var $vanus = '25';
+    var $sugu = 'mees';
+}
 
-$isik = $eesnimi.' '.$perenimi.' '."($vanus)";
+$isik = new isik_klass;
 
-echo $isik;
+echo $isik->eesnimi.' ';
+echo $isik->perenimi.' ';
+echo $isik->vanus.' ';
+echo $isik->sugu;
+
 
 ?>
