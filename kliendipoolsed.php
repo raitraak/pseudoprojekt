@@ -6,5 +6,17 @@
 </head>
 <body>
 
+<button onclick="myfunction()">Kliki Siia</button>
+
+<script>
+
+    function myfunction() {
+        alert('Tere Maailm')
+
+    }
+
+</script>
+
+
 </body>
 </html>
