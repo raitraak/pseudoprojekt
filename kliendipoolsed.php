@@ -7,15 +7,20 @@
 </head>
 <body>
 
-<img src="http://t2.gstatic.com/images?q=tbn:ANd9GcTUDQgbT9PFaERFaLbqP8sFsyq2r3sSYu6BtCj63z90tLEpALgo" id="kass" onclick="koeraks()"/>
+<button type="submit" onclick="punaseks()">RED</button>
+<button type="submit" onclick="roheliseks()">GREEN</button>
+<button type="submit" onclick="siniseks()">BLUE</button>
 
 <script>
-
-    $('#kass').click(function koeraks(){
-        $(this).attr('src','http://animalia-life.com/data_images/dog/dog7.jpg');
-    });
-
+    function punaseks() {
+        $('body').css('background','red');
+    }
+    function roheliseks() {
+        $('body').css('background','green');
+    }
+    function siniseks() {
+        $('body').css('background','blue');
+    }
 </script>
-
 </body>
 </html>
