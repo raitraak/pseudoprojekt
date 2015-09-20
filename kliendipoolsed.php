@@ -6,13 +6,16 @@
 </head>
 <body>
 
-<button onclick="myfunction()">Kliki Siia</button>
+<a href="http://khk.ee" id="anchor">Vajuta Siia</a>
 
-<script>
+<script type="text/javascript">
 
-    function myfunction() {
-        alert('Tere Maailm')
+    var anchor = document.getElementById('anchor');
 
+    anchor.addEventListener('click', teemidagi, false);
+
+    function teemidagi() {
+        alert('Tere Maailm!');
     }
 
 </script>
