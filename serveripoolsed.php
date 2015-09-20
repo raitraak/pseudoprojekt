@@ -25,4 +25,3 @@ if ($kass1['kass'])
 </body>
 </html>
 
-
