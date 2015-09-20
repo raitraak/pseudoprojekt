@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<a href="http://khk.ee" id="anchor">Vajuta Siia</a>
+<a href="#" id="anchor">Jääme siia</a>
 
 <script type="text/javascript">
 
@@ -15,7 +15,7 @@
     anchor.addEventListener('click', teemidagi, false);
 
     function teemidagi() {
-        alert('Tere Maailm!');
+        alert('Jääme Siia!');
     }
 
 </script>
