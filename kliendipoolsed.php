@@ -6,16 +6,13 @@
 </head>
 <body>
 
-<a href="#" id="anchor">Jääme siia</a>
+<img src="http://t2.gstatic.com/images?q=tbn:ANd9GcTUDQgbT9PFaERFaLbqP8sFsyq2r3sSYu6BtCj63z90tLEpALgo" id="kass" onclick="koeraks()"/>
 
 <script type="text/javascript">
 
-    var anchor = document.getElementById('anchor');
+    function koeraks() {
 
-    anchor.addEventListener('click', teemidagi, false);
-
-    function teemidagi() {
-        alert('Jääme Siia!');
+        document.getElementById('kass').src = 'http://animalia-life.com/data_images/dog/dog1.jpg';
     }
 
 </script>
