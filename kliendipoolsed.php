@@ -7,13 +7,14 @@
 </head>
 <body>
 
-<img src="pildid/kass-66103366.jpg" id="kass" onclick="koeraks()">
+<img src="pildid/kass-66103366.jpg" id="kass"/>
 
 <script>
     $('#kass').click(function(){
 
         $(this).attr('src','pildid/kutsikas-koer-67073776.jpg');
     });
+
 
 </script>
 </body>
