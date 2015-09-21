@@ -12,6 +12,8 @@
     function tere() {
         alert('Tere Maailm!')
     }
+
 </script>
+
 </body>
 </html>
