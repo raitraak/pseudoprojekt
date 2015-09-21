@@ -6,15 +6,15 @@
 </head>
 <body>
 
-
-<input type="button" onclick="tere()" value="Tere Maailm">
+<a href="http://khk.ee" onclick="jaamesiia()">Jääme Siia</a>
 
 <script>
-    function tere() {
-        alert('Tere Maailm!')
+    function jaamesiia() {
+
+        event.preventDefault();
+        alert('Jaame Siia')
     }
-
 </script>
-
 </body>
+
 </html>
