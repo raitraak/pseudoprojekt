@@ -6,14 +6,14 @@
 </head>
 <body>
 
-<a href="http://khk.ee" onclick="jaamesiia()">Jääme Siia</a>
+<img src="pildid/kass-66103366.jpg" id="kass" onclick="koeraks()">
 
 <script>
-    function jaamesiia() {
+    function koeraks() {
 
-        event.preventDefault();
-        alert('Jaame Siia')
+        document.getElementById('kass').src='pildid/kutsikas-koer-67073776.jpg';
     }
+
 </script>
 </body>
 
