@@ -6,6 +6,7 @@
 </head>
 <body>
 
+
 <input type="button" onclick="tere()" value="Tere Maailm">
 
 <script>
