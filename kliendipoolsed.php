@@ -7,21 +7,18 @@
 </head>
 <body>
 
-<input type="button" id="red" value="Red">
-<input type="button" id="green" value="Green">
-<input type="button" id="blue" value="Blue">
-
 <script>
-
-    $('input').click(function(){
-
-       var varv = $(this).attr('value');
-        $('body').css('background', varv);
-    });
-
-
-
+    
+    $('*').contextmenu( function() {
+        return false;
+        });
+    
+    
 </script>
+
+
+
+
 </body>
 
 </html>
