@@ -7,13 +7,18 @@
 </head>
 <body>
 
-<img src="pildid/kass-66103366.jpg" id="kass"/>
+<input type="button" id="red" value="Red">
+<input type="button" id="green" value="Green">
+<input type="button" id="blue" value="Blue">
 
 <script>
-    $('#kass').click(function(){
 
-        $(this).attr('src','pildid/kutsikas-koer-67073776.jpg');
+    $('input').click(function(){
+
+       var varv = $(this).attr('value');
+        $('body').css('background', varv);
     });
+
 
 
 </script>
