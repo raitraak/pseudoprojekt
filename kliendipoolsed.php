@@ -7,20 +7,15 @@
 </head>
 <body>
 
-<input type="button" id="luba" value="Luba Parem Klõps">
+<button>Peida Kass</button>
+<img src="pildid/kass-66103366.jpg"/>
+
 
 <script>
 
-   $('*').contextmenu(function() {
-       return false;
-   });
-
-       $('#luba').bind('click', function() {
-
-           $('*').off();
-           alert('Lubatud');
-
-       });
+$('button').click(function() {
+    $('img').toggle();
+});
 
 
 </script>
