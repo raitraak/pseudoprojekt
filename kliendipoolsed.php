@@ -7,17 +7,23 @@
 </head>
 <body>
 
+<input type="button" id="luba" value="Luba Parem Klõps">
+
 <script>
-    
-    $('*').contextmenu( function() {
-        return false;
-        });
-    
-    
+
+   $('*').contextmenu(function() {
+       return false;
+   });
+
+       $('#luba').bind('click', function() {
+
+           $('*').off();
+           alert('Lubatud');
+
+       });
+
+
 </script>
-
-
-
 
 </body>
 
