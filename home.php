@@ -7,13 +7,7 @@
 <body>
 
 <?php
-
-
-if (isset($_GET['page'])) {
-    require $_GET['page'];
-}
-
-
+echo 'Tere Maailm';
 ?>
 
 </body>
