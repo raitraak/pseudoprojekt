@@ -13,7 +13,6 @@ if (isset($_GET['page'])) {
     require $_GET['page'];
 }
 
-
 ?>
 
 </body>
