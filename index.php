@@ -1,3 +1,19 @@
+
+
+<?php
+
+$posts = array(
+
+    title => 'Man must explore, and this is exploration at its greatest',
+    subtitle => 'Problems look mighty small from 150 miles up',
+    author => 'Strt by Bootsrap',
+        date => 'On September 24,2014',
+);
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
