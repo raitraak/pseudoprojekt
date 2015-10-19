@@ -15,7 +15,7 @@ $posts[] = array(
     "I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.",
     "We predict too much for the next year and yet far too little for the next ten.",
     "Strt Bootstrap",
-    "ugust 24, 2014"
+    "August 24, 2014"
 
 
 );
