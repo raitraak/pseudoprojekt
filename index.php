@@ -1,24 +1,25 @@
 
 <?php
 
-$posts[] = array(
+$servername = 'localhost';
+$username = 'root';
+$pass = '';
+$dbname = 'blog';
 
-"Man must explore, and this is exploration at its greatest",
-"Problems look mighty small from 150 miles up",
-"Strt by Bootsrap",
-"On September 24,2014"
+$conn = new mysqli($servername, $username, $pass, $dbname);
 
-);
+if ($conn->connect_error) {
+    die("connection failed: " .$conn->connect_error);
+}
 
-$posts[] = array(
+$sql = "SELECT * FROM POSTS JOIN AUTHORS";
+$result = $conn->query($sql);
+if(mysqli_num_rows($result)>0) {
+    while($row=mysqli_fetch_assoc($result)) {
 
-    "I believe every human has a finite number of heartbeats. I don't intend to waste any of mine.",
-    "We predict too much for the next year and yet far too little for the next ten.",
-    "Strt Bootstrap",
-    "August 24, 2014"
-
-
-);
+        $posts[] = $row;
+    }
+}
 
 
 ?>
@@ -113,19 +114,19 @@ $posts[] = array(
 
     <!-- Main Content -->
     <div class="container">
-        <?php foreach ($posts as $items): ?>
+        <?php foreach ($posts as $post): ?>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-preview">
                     <a href="post.html">
                         <h2 class="post-title">
-                            <?php echo "$items[0]"; ?>
+                            <?php $post['title'] ?>
                         </h2>
                         <h3 class="post-subtitle">
-                            <?php echo "$items[1]"; ?>
+                            <?php $post['description'] ?>
                         </h3>
                     </a>
-                    <p class="post-meta">Posted by <a href="#"><?php echo "$items[2]"; ?></a> on <?php echo "$items[3]"; ?></p>
+                    <p class="post-meta">Posted by <a href="#"><?php $post['name'] ?></a> on <?php $post['date'] ?></p>
                 </div>
                 <hr>
 
