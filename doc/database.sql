@@ -38,6 +38,7 @@ CREATE TABLE IF NOT EXISTS `authors` (
 INSERT INTO `authors` (`author_id`, `name`) VALUES
 (1, 'admin');
 
+
 -- --------------------------------------------------------
 
 --
