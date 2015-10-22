@@ -1,24 +1,17 @@
 
 <?php
 
-$servername = 'localhost';
-$username = 'root';
-$pass = '';
-$dbname = 'blog';
+require('config.php');
 
-$conn = new mysqli($servername, $username, $pass, $dbname);
+$conn = mysqli_connect(DATABASE_HOSTNAME, DATABASE_USERNAME, DATABASE_PASSWORD, DATABASE_DATABASE)
+or die(mysqli_error($conn));
 
-if ($conn->connect_error) {
-    die("connection failed: " .$conn->connect_error);
-}
+mysqli_query($conn, "Set names 'UTF8'");
 
-$sql = "SELECT * FROM POSTS JOIN AUTHORS";
-$result = $conn->query($sql);
-if(mysqli_num_rows($result)>0) {
-    while($row=mysqli_fetch_assoc($result)) {
+$sql = mysqli_query($conn, "select * from posts join authors");
+while($row=mysqli_fetch_assoc($sql)) {
 
-        $posts[] = $row;
-    }
+    $posts[] = $row;
 }
 
 
