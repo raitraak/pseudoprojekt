@@ -8,7 +8,6 @@ or die(mysqli_error($conn));
 
 mysqli_query($conn, "Set names 'UTF8'");
 
-
 $sql = mysqli_query($conn, "select * from posts join authors");
 while($row=mysqli_fetch_assoc($sql)) {
 
