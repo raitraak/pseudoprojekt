@@ -16,7 +16,7 @@ if(file_exists($fail)) {
 else {
     echo 'Dokumenti ei leitud! Luuakse uus dokument.';
    $faill= fopen($fail,'w');
-    file_put_contents($fail,"test;test@khk.ee\ntest2;test2@khk.ee\n");
+    file_put_contents($fail,"Rait;Raak;test@khk.ee\nJuss;Juhansoo;test2@khk.ee\n");
     fclose($faill);
 }
 
