@@ -1,5 +1,16 @@
 <?php
 
+if(isset($_GET['checkmail'])){
+    $mail=$_GET['checkmail'];
+    if(checkdnsrr(array_pop(explode("@",$mail)),"MX")){
+        exit("Emaili domeen eksisteerib.");
+    }
+    else{
+        exit("Emaili domeeni ei ole olemas.");
+    }
+}
+
+
 $fail = 'data.csv';
 if(file_exists($fail)) {
 
