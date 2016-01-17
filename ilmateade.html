@@ -1,43 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Ilmateade</title>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
     <style>
         .container {
-            margin: 0 auto;
             text-align: center;
+            margin: 0 auto;
         }
+
+        #linn {
+            width: 150px;
+        }
+
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Sisesta linna nimi</h1>
-    <input id="linn" type="text">
-        <button onclick="javascript:ilmateade()">Ilm Täna</button>
-            <p id="info"></p>
+    <select id="linn">
+     <option selected="selected"></option>
+</select>
+    <button onclick="Javascript:ilmateade()">Ilmateade</button>
+<p id="info"></p>
+
 </div>
-
 <script type="text/javascript">
-
-
-            function ilmateade(){
-                var inputField =document.getElementById('linn');
-                var inputVal=inputField.value;
-                if(!inputVal){
-                    alert("Sisesta linna nimi");
-                    inputField.focus();
-                    return false;
+    $(document).ready(
+            $.get("http://cors.io/?u=http://openweathermap.org/help/city_list.txt", function (data) {
+                var dataString = data.split("\n");
+                var result = [];
+                var headers = dataString[0].split("\t");
+                for (var i = 1; i < dataString.length - 1; i++) {
+                    var obj = {};
+                    var currentline = dataString[i].split("\t");
+                    obj[headers[1]] = currentline[1];
+                    result.push(obj);
                 }
-                else{
-                    $.get("http://api.openweathermap.org/data/2.5/weather?q="+inputVal+"&appid=935452dfa4f9ecca6b0d749ae7e84ca4", function (data) {
-                        document.getElementById('info').innerHTML=data.weather[0].description;
-                    });
-                }
-            }
-
+                $.each(result, function (index, item) {
+                    $('#linn').append(
+                            $('<option></option>').val(item["nm"]).text(item["nm"])
+                    );
+                });
+            })
+    );
+    function ilmateade() {
+        var inputField = document.getElementById('linn');
+        var inputVal = inputField.value;
+        $.get("http://api.openweathermap.org/data/2.5/weather?q=" + inputVal + "&appid=935452dfa4f9ecca6b0d749ae7e84ca4", function (data) {
+            document.getElementById('info').innerHTML = data.weather[0].description;
+        });
+    }
 </script>
 </body>
 </html>
