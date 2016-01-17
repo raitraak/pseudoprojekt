@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <title>Ilmateade</title>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+    <style>
+        .container {
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Sisesta linna nimi</h1>
-<input id="linn" type="text">
-<button onclick="javascript:ilmateade()">Ilm Täna</button>
-<p id="info"></p>
+<div class="container">
+    <h1>Sisesta linna nimi</h1>
+    <input id="linn" type="text">
+        <button onclick="javascript:ilmateade()">Ilm Täna</button>
+            <p id="info"></p>
+</div>
 
 <script type="text/javascript">
 
