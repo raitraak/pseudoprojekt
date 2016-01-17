@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <title>Ilmateade</title>
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+    <script type="text/javascript" src="chosen/chosen.jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="chosen/chosen.css"/>
     <style>
         .container {
             text-align: center;
             margin: 0 auto;
         }
 
-        #linn {
-            width: 150px;
-        }
 
     </style>
 </head>
 <body>
 
 <div class="container">
-    <select id="linn">
+    <select id="linn" class="chosen">
      <option selected="selected"></option>
 </select>
     <button onclick="Javascript:ilmateade()">Ilmateade</button>
@@ -43,7 +42,10 @@
                             $('<option></option>').val(item["nm"]).text(item["nm"])
                     );
                 });
+
+                $(".chosen").chosen({width:"25%"});
             })
+
     );
     function ilmateade() {
         var inputField = document.getElementById('linn');
