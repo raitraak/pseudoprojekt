@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ilmateade</title>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+</head>
+<body>
+
+<h1>Sisesta linna nimi</h1>
+<input id="linn" type="text">
+<button onclick="javascript:ilmateade()">Ilm Täna</button>
+<p id="info"></p>
+
+<script type="text/javascript">
+
+
+            function ilmateade(){
+                var inputField =document.getElementById('linn');
+                var inputVal=inputField.value;
+                if(!inputVal){
+                    alert("Sisesta linna nimi");
+                    inputField.focus();
+                    return false;
+                }
+                else{
+                    $.get("http://api.openweathermap.org/data/2.5/weather?q="+inputVal+"&appid=935452dfa4f9ecca6b0d749ae7e84ca4", function (data) {
+                        document.getElementById('info').innerHTML=data.weather[0].description;
+                    });
+                }
+            }
+
+</script>
+</body>
+</html>
